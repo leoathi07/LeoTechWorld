@@ -4,59 +4,490 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07111f">
-  <meta name="description" content="LeoTechWorld — Building technology with purpose.">
-  <title>LeoTechWorld | Official Website</title>
+  <meta name="theme-color" content="#070812">
+
+  <title>LeoTechWorld | Technology Beyond Boundaries</title>
+
+  <meta name="description" content="LeoTechWorld explores software development, artificial intelligence, cloud technology and innovative digital solutions.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LeoTechWorld | Technology Beyond Boundaries">
+  <meta property="og:description" content="Discover the next generation of technology with LeoTechWorld.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header class="navbar">
-    <a href="index.html" class="brand">
-      <img src="file_00000000a3048211a566ba9c588f7ef5.pgn" alt="LeoTechWorld">
-      <span>LeoTechWorld</span>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader" aria-label="Loading LeoTechWorld">
+    <div class="loader-orbit orbit-one"></div>
+    <div class="loader-orbit orbit-two"></div>
+    <div class="loader-orbit orbit-three"></div>
+    <div class="loader-logo">LT</div>
+    <h2>LEOTECHWORLD</h2>
+    <p class="loader-tagline">TECHNOLOGY BEYOND BOUNDARIES</p>
+    <div class="loader-bar"><span></span></div>
+    <span class="loader-caption">INITIALIZING EXPERIENCE</span>
+  </div>
+
+  <!-- Animated Background -->
+  <div class="ambient ambient-blue" aria-hidden="true"></div>
+  <div class="ambient ambient-purple" aria-hidden="true"></div>
+  <div class="ambient ambient-cyan" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#home" aria-label="LeoTechWorld home">
+      <span class="brand-icon">LT</span>
+      <span class="brand-name">LEO<span>TECH</span>WORLD</span>
     </a>
-    <a class="nav-link" href="#about">About Us</a>
+
+    <button class="menu-toggle" id="menuToggle"
+      type="button" aria-label="Toggle navigation"
+      aria-expanded="false" aria-controls="navLinks">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#technology">Technology</a>
+      <a href="#projects">Projects</a>
+      <a href="#ideas">Ideas Hub</a>
+      <a href="#contact" class="nav-cta">Let's Connect <span>↗</span></a>
+    </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <p class="eyebrow">INNOVATION · TECHNOLOGY · FUTURE</p>
-      <h1>Technology That<br><span>Moves You Forward.</span></h1>
-      <p class="intro">
-        Welcome to LeoTechWorld — a technology brand focused on
-        building meaningful digital experiences for the future.
-      </p>
-      <a class="primary-button" href="#about">Discover Our Vision ↗</a>
-      <div class="hero-glow"></div>
+
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          BUILDING WHAT'S NEXT
+        </div>
+
+        <p class="hero-overline">WELCOME TO LEOTECHWORLD</p>
+
+        <h1>
+          Technology<br>
+          <span class="gradient-text">Beyond Boundaries.</span>
+        </h1>
+
+        <p class="hero-description">
+          Exploring bold ideas and building digital experiences
+          through software, artificial intelligence and emerging
+          technologies.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">
+            Explore Our Work <span>↗</span>
+          </a>
+          <a class="button button-secondary" href="#ideas">
+            Share Your Idea <span>✦</span>
+          </a>
+        </div>
+
+        <div class="hero-note">
+          <span class="note-line"></span>
+          IDEAS INTO INNOVATION
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="LeoTechWorld digital technology visual">
+        <div class="globe-halo"></div>
+        <div class="globe-orbit globe-orbit-one"></div>
+        <div class="globe-orbit globe-orbit-two"></div>
+        <div class="globe-orbit globe-orbit-three"></div>
+
+        <div class="digital-globe">
+          <div class="globe-grid"></div>
+          <div class="globe-shine"></div>
+          <div class="globe-core">LT</div>
+        </div>
+
+        <div class="floating-chip chip-top">
+          <span class="chip-dot"></span>
+          DIGITAL INNOVATION
+        </div>
+
+        <div class="floating-chip chip-bottom">
+          <span>✦</span> FUTURE IN MOTION
+        </div>
+      </div>
+
+      <a class="scroll-indicator" href="#about">
+        <span class="scroll-line"></span>
+        SCROLL TO EXPLORE
+      </a>
     </section>
 
-    <section id="about" class="about">
-      <p class="eyebrow">WHO WE ARE</p>
-      <h2>Built with purpose.<br>Driven by innovation.</h2>
-      <p>
-        LeoTechWorld is an independent technology brand founded by
-        LeoAthi, with a vision to create useful, accessible and
-        forward-thinking digital solutions.
+    <!-- About -->
+    <section class="section about-section" id="about">
+      <div class="section-heading reveal">
+        <span class="section-kicker">01 / WHO WE ARE</span>
+        <h2>Ideas that move<br><span class="gradient-text">technology forward.</span></h2>
+        <p>
+          LeoTechWorld is a technology brand focused on exploring
+          digital possibilities, developing useful solutions and
+          turning promising ideas into practical experiences.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="info-card reveal">
+          <span class="card-number">01</span>
+          <div class="card-icon">◈</div>
+          <h3>Our Mission</h3>
+          <p>
+            Explore technology and create accessible, meaningful
+            digital solutions that solve real problems.
+          </p>
+        </article>
+
+        <article class="info-card reveal">
+          <span class="card-number">02</span>
+          <div class="card-icon">✧</div>
+          <h3>Our Vision</h3>
+          <p>
+            Build a growing technology ecosystem driven by creativity,
+            continuous learning and user-focused innovation.
+          </p>
+        </article>
+
+        <article class="info-card reveal">
+          <span class="card-number">03</span>
+          <div class="card-icon">⌘</div>
+          <h3>Our Approach</h3>
+          <p>
+            Listen to users, test ideas, improve continuously and
+            prioritize usefulness, quality and trust.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Technology -->
+    <section class="section technology-section" id="technology">
+      <div class="section-heading reveal">
+        <span class="section-kicker">02 / WHAT WE EXPLORE</span>
+        <h2>Technology without<br><span class="gradient-text">limits.</span></h2>
+        <p>Exploring the tools and ideas shaping tomorrow's digital world.</p>
+      </div>
+
+      <div class="technology-grid">
+        <article class="tech-card tech-blue reveal">
+          <div class="tech-card-top">
+            <span class="tech-icon">⌘</span>
+            <span class="tech-index">01</span>
+          </div>
+          <h3>Software Development</h3>
+          <p>
+            Web experiences, useful applications and digital tools
+            designed around real user needs.
+          </p>
+          <span class="tech-label">BUILD · CREATE · IMPROVE</span>
+        </article>
+
+        <article class="tech-card tech-purple reveal">
+          <div class="tech-card-top">
+            <span class="tech-icon">✧</span>
+            <span class="tech-index">02</span>
+          </div>
+          <h3>AI & Innovation</h3>
+          <p>
+            Exploring intelligent tools, automation and new ways
+            to make everyday tasks easier.
+          </p>
+          <span class="tech-label">EXPLORE · LEARN · INNOVATE</span>
+        </article>
+
+        <article class="tech-card tech-cyan reveal">
+          <div class="tech-card-top">
+            <span class="tech-icon">☁</span>
+            <span class="tech-index">03</span>
+          </div>
+          <h3>Cloud Technology</h3>
+          <p>
+            Discovering modern ways to deploy, access and maintain
+            digital products online.
+          </p>
+          <span class="tech-label">CONNECT · DEPLOY · SCALE</span>
+        </article>
+
+        <article class="tech-card tech-pink reveal">
+          <div class="tech-card-top">
+            <span class="tech-icon">◎</span>
+            <span class="tech-index">04</span>
+          </div>
+          <h3>Digital Experiences</h3>
+          <p>
+            Creating accessible, responsive and engaging experiences
+            across phones, tablets and computers.
+          </p>
+          <span class="tech-label">DESIGN · EXPERIENCE · GROW</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects-section" id="projects">
+      <div class="section-heading reveal">
+        <span class="section-kicker">03 / OUR WORK</span>
+        <h2>Ideas become<br><span class="gradient-text">real experiences.</span></h2>
+        <p>
+          Discover our products and experiments as they develop.
+          Only released projects will be marked as launched.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-art project-art-one">
+            <span class="project-art-symbol">L<span>T</span></span>
+            <span class="project-art-label">01 / DIGITAL TOOLS</span>
+          </div>
+          <div class="project-content">
+            <span class="project-status">PROJECT CONCEPT</span>
+            <h3>LeoPDF</h3>
+            <p>
+              A document utility project concept focused on making
+              PDF tasks simpler and more accessible.
+            </p>
+            <a class="text-link" href="#ideas">Explore the idea <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-art project-art-two">
+            <span class="project-art-symbol">AI<span>✦</span></span>
+            <span class="project-art-label">02 / INTELLIGENT TOOLS</span>
+          </div>
+          <div class="project-content">
+            <span class="project-status">FUTURE EXPLORATION</span>
+            <h3>AI Productivity Tools</h3>
+            <p>
+              Exploring practical AI-powered ideas for learning,
+              productivity and everyday digital work.
+            </p>
+            <a class="text-link" href="#ideas">Suggest a feature <span>↗</span></a>
+          </div>
+        </article>
+      </div>
+
+      <p class="section-footnote">
+        Project concepts are presented transparently and are not
+        advertised as released products.
       </p>
     </section>
 
-    <section class="vision">
-      <p class="eyebrow">OUR VISION</p>
-      <h2>Think beyond today.</h2>
-      <p>
-        Our goal is to turn ideas into practical digital experiences
-        that make technology more useful for everyone.
+    <!-- Ideas Hub -->
+    <section class="section ideas-section" id="ideas">
+      <div class="ideas-panel reveal">
+        <div class="ideas-content">
+          <span class="section-kicker">04 / COMMUNITY IDEAS</span>
+          <h2>Your idea could<br>shape the <span class="gradient-text">future.</span></h2>
+          <p>
+            What app do you wish existed? Tell us what problem it
+            should solve and which features would make it useful.
+          </p>
+          <a href="#idea-form" class="button button-primary">
+            Suggest an App <span>↗</span>
+          </a>
+        </div>
+
+        <div class="ideas-decoration" aria-hidden="true">
+          <div class="idea-orbit idea-orbit-one"></div>
+          <div class="idea-orbit idea-orbit-two"></div>
+          <div class="idea-center">✦</div>
+        </div>
+      </div>
+
+      <div class="idea-form-wrap reveal" id="idea-form">
+        <div class="form-heading">
+          <span class="section-kicker">SHARE YOUR THINKING</span>
+          <h3>Suggest an app idea</h3>
+          <p>Describe your idea so we can understand what you need.</p>
+        </div>
+
+        <form id="ideaForm">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="ideaTitle">Idea name</label>
+              <input id="ideaTitle" name="ideaTitle" type="text"
+                maxlength="100" placeholder="Give your idea a name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="ideaCategory">Category</label>
+              <select id="ideaCategory" name="ideaCategory" required>
+                <option value="">Choose a category</option>
+                <option value="Education">Education</option>
+                <option value="AI">Artificial Intelligence</option>
+                <option value="Productivity">Productivity</option>
+                <option value="Business">Business</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="ideaProblem">What problem should it solve?</label>
+            <textarea id="ideaProblem" name="ideaProblem" rows="4"
+              maxlength="1500" placeholder="Describe the problem and your solution..."
+              required></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="ideaFeatures">Features you want (optional)</label>
+            <textarea id="ideaFeatures" name="ideaFeatures" rows="3"
+              maxlength="1500" placeholder="What should this app be able to do?"></textarea>
+          </div>
+
+          <button class="button button-primary form-submit" type="submit">
+            Preview My Idea <span>↗</span>
+          </button>
+
+          <p class="form-note">
+            Demo form: your idea will be previewed in this browser.
+            Permanent submission and community voting require a backend.
+          </p>
+
+          <div class="form-result" id="ideaResult" role="status"
+            aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Development Journey -->
+    <section class="section journey-section" id="journey">
+      <div class="section-heading reveal">
+        <span class="section-kicker">05 / THE JOURNEY</span>
+        <h2>From first idea<br>to <span class="gradient-text">what's next.</span></h2>
+        <p>
+          A transparent framework for turning promising concepts
+          into useful products.
+        </p>
+      </div>
+
+      <div class="journey-grid">
+        <article class="journey-step reveal">
+          <span class="journey-number">01</span>
+          <span class="journey-icon">💡</span>
+          <h3>Idea Received</h3>
+          <p>A concept is shared and its purpose is understood.</p>
+        </article>
+
+        <article class="journey-step reveal">
+          <span class="journey-number">02</span>
+          <span class="journey-icon">⌕</span>
+          <h3>Planning</h3>
+          <p>Feasibility, user needs and possible features are evaluated.</p>
+        </article>
+
+        <article class="journey-step reveal">
+          <span class="journey-number">03</span>
+          <span class="journey-icon">⚙</span>
+          <h3>Developing</h3>
+          <p>The product is built, tested and improved.</p>
+        </article>
+
+        <article class="journey-step reveal">
+          <span class="journey-number">04</span>
+          <span class="journey-icon">↗</span>
+          <h3>Launched</h3>
+          <p>A verified release becomes available to users.</p>
+        </article>
+      </div>
+
+      <p class="section-footnote">
+        These are process stages. Individual project statuses will
+        be shown only when they have been verified.
       </p>
     </section>
+
+    <!-- Founder -->
+    <section class="section founder-section" id="founder">
+      <div class="founder-visual reveal">
+        <div class="founder-monogram">LT</div>
+        <div class="founder-orbit"></div>
+        <span class="founder-caption">BUILT ON CURIOSITY</span>
+      </div>
+
+      <div class="founder-content reveal">
+        <span class="section-kicker">06 / THE FOUNDER</span>
+        <h2>A vision to<br>build <span class="gradient-text">what matters.</span></h2>
+        <p>
+          LeoTechWorld is a growing technology initiative led by
+          LeoAthi, focused on learning, experimentation and building
+          digital solutions with real-world value.
+        </p>
+        <p>
+          The goal is simple: listen to users, keep improving and
+          turn good ideas into useful technology.
+        </p>
+        <div class="founder-signature">
+          <span>LeoAthi</span>
+          <small>Founder · LeoTechWorld</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="contact-panel reveal">
+        <span class="section-kicker">07 / GET IN TOUCH</span>
+        <h2>Have a question?<br><span class="gradient-text">Let's connect.</span></h2>
+        <p>
+          Have feedback, a collaboration idea or a question about
+          our work? We welcome thoughtful conversations.
+        </p>
+        <a href="#idea-form" class="button button-primary">
+          Share Your Idea <span>↗</span>
+        </a>
+        <p class="contact-note">
+          Official contact details can be added once they are established.
+        </p>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <a href="official-logo.html">Official Logo</a>
-    <p>© <span id="year"></span> LeoTechWorld. All rights reserved.</p>
-    <p>Founded by LeoAthi</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-icon">LT</span>
+      <span class="brand-name">LEO<span>TECH</span>WORLD</span>
+    </a>
+
+    <p class="footer-tagline">Technology Beyond Boundaries.</p>
+
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#technology">Technology</a>
+      <a href="#projects">Projects</a>
+      <a href="#ideas">Ideas Hub</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear">2026</span> LeoTechWorld. All rights reserved.</p>
+      <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
-
