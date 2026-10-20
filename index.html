@@ -19,18 +19,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="loading">
 
   <!-- Loading Screen -->
   <div class="loader" id="loader" aria-label="Loading LeoTechWorld">
     <div class="loader-orbit orbit-one"></div>
     <div class="loader-orbit orbit-two"></div>
     <div class="loader-orbit orbit-three"></div>
-    <div class="loader-logo">LT</div>
+
+    <img
+      src="assets/logo.svg"
+      alt="LeoTechWorld logo"
+      class="loader-logo-image"
+    >
+
     <h2>LEOTECHWORLD</h2>
     <p class="loader-tagline">TECHNOLOGY BEYOND BOUNDARIES</p>
     <div class="loader-bar"><span></span></div>
@@ -46,13 +53,21 @@
   <!-- Navigation -->
   <header class="navbar" id="navbar">
     <a class="brand" href="#home" aria-label="LeoTechWorld home">
-      <span class="brand-icon">LT</span>
-      <span class="brand-name">LEO<span>TECH</span>WORLD</span>
+      <img
+        src="assets/logo.svg"
+        alt="LeoTechWorld — Technology Beyond Boundaries"
+        class="brand-logo"
+      >
     </a>
 
-    <button class="menu-toggle" id="menuToggle"
-      type="button" aria-label="Toggle navigation"
-      aria-expanded="false" aria-controls="navLinks">
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >
       <span></span>
       <span></span>
       <span></span>
@@ -206,7 +221,7 @@
             <span class="tech-icon">✧</span>
             <span class="tech-index">02</span>
           </div>
-          <h3>AI & Innovation</h3>
+          <h3>AI &amp; Innovation</h3>
           <p>
             Exploring intelligent tools, automation and new ways
             to make everyday tasks easier.
@@ -468,9 +483,12 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <a class="brand footer-brand" href="#home">
-      <span class="brand-icon">LT</span>
-      <span class="brand-name">LEO<span>TECH</span>WORLD</span>
+    <a class="brand footer-brand" href="#home" aria-label="LeoTechWorld home">
+      <img
+        src="assets/logo.svg"
+        alt="LeoTechWorld"
+        class="brand-logo"
+      >
     </a>
 
     <p class="footer-tagline">Technology Beyond Boundaries.</p>
@@ -485,7 +503,7 @@
 
     <div class="footer-bottom">
       <p>© <span id="currentYear">2026</span> LeoTechWorld. All rights reserved.</p>
-      <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+      <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
     </div>
   </footer>
 
